@@ -153,8 +153,8 @@ def gerar_planilha(campos_importantes):
 
     # Processar cada linha da saída da LLM
     for linha in campos_importantes.split("\n"):
-        linha = linha.strip()  # Remove espaços em branco no início e no final
-        if not linha:  # Ignorar linhas em branco
+        linha = linha.strip()
+        if not linha:
             if item_atual:  # Se houver um item atual, adicioná-lo à lista
                 dados.append(item_atual)
                 item_atual = {}  # Reiniciar o item atual
@@ -162,14 +162,13 @@ def gerar_planilha(campos_importantes):
 
         # Verificar se a linha contém um par campo=valor
         if "=" in linha:
-            # Dividir no primeiro '=' para evitar problemas com valores que contenham '='
             campo, valor = linha.split("=", 1)
-            campo = campo.strip()  # Remove espaços em branco do campo
-            valor = valor.strip()  # Remove espaços em branco do valor
+            campo = campo.strip()
+            valor = valor.strip()
             item_atual[campo] = valor
         else:
             # Se a linha não contiver '=', tratar como um campo sem valor ou um comentário
-            item_atual[linha] = ""  # Adicionar o campo com valor vazio
+            item_atual[linha] = ""
 
     # Adicionar o último item, se houver
     if item_atual:
