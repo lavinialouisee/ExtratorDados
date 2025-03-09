@@ -159,11 +159,17 @@ def gerar_planilha(campos_importantes):
                 dados.append(item_atual)
                 item_atual = {}  # Reiniciar o item atual
             continue
-        if "=" in linha:  # Verificar se a linha contém um par campo=valor
-            campo, valor = linha.split("=", 1)  # Dividir no primeiro '='
+
+        # Verificar se a linha contém um par campo=valor
+        if "=" in linha:
+            # Dividir no primeiro '=' para evitar problemas com valores que contenham '='
+            campo, valor = linha.split("=", 1)
             campo = campo.strip()  # Remove espaços em branco do campo
             valor = valor.strip()  # Remove espaços em branco do valor
-            item_atual[campo] = valor  # Adicionar ao item atual
+            item_atual[campo] = valor
+        else:
+            # Se a linha não contiver '=', tratar como um campo sem valor ou um comentário
+            item_atual[linha] = ""  # Adicionar o campo com valor vazio
 
     # Adicionar o último item, se houver
     if item_atual:
