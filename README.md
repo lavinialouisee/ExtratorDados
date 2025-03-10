@@ -13,7 +13,7 @@ O projeto apresentado utiliza algumas tecnologias:
 - Tesseract OCR para extrair texto em imagens
 - camelot-py para extrair tabelas de arquivos PDF
 - pdf2image para converter páginas de PDF em imagens (para o aplicar o OCR depois)
-- pandas para manipulação e nálise de dados estruturados
+- pandas para manipulação e análise de dados estruturados
 - flask para criar uma API web no Python
 - openai para integrar com LLM para análise do texto extraído
 
@@ -53,7 +53,8 @@ A seguir será apresentada a instalação das extensões necessárias. Também h
     No Windows, a instalação está disponível no [Link Instalação Poppler](https://github.com/oschwartz10612/poppler-windows/releases) e precisa ser adicionado ao PATH do sistema.
 
 
-4. Execução:
+3. Execução:
+   
     Execute primeiro o `app.py` para iniciar a aplicação
     ```sh
     python app.py
