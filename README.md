@@ -44,7 +44,8 @@ A seguir será apresentada a instalação das extensões necessárias. Também h
     ```
     No Windows, a instalação está disponível no [Link Instalação Tesseract OCR](https://github.com/UB-Mannheim/tesseract/wiki)
 
-    O Poppler faz parte do pdf2image e também precisa estar instalado no sistema
+    O Poppler faz parte do pdf2image e também precisa estar instalado no sistema.
+
     No Ubuntu,
     ```sh
     sudo apt install poppler-utils
@@ -52,7 +53,7 @@ A seguir será apresentada a instalação das extensões necessárias. Também h
     No Windows, a instalação está disponível no [Link Instalação Poppler](https://github.com/oschwartz10612/poppler-windows/releases) e precisa ser adicionado ao PATH do sistema.
 
 
-3. Execução:
+4. Execução:
     Execute primeiro o `app.py` para iniciar a aplicação
     ```sh
     python app.py
